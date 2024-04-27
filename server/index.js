@@ -13,7 +13,13 @@ mongoose.connect(DB_URL).then(() => {
 });
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://registration-form-wine-tau.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 app.use("/", userRouter);
 app.use(errorHandler);
 app.listen(PORT, () => {
