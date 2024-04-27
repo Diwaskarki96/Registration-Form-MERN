@@ -13,7 +13,13 @@ mongoose.connect(DB_URL).then(() => {
 });
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://registration-form-topaz-alpha.vercel.app/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use("/", userRouter);
 app.use(errorHandler);
 app.listen(PORT, () => {
