@@ -15,7 +15,7 @@ mongoose.connect(DB_URL).then(() => {
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://registration-form-five-xi.vercel.app"],
+    origin: ["https://registration-form-five-alpha.vercel.app"],
     methods: ["GET", "POST"],
     credentials: true,
   })
