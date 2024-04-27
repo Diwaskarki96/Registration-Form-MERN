@@ -13,13 +13,7 @@ mongoose.connect(DB_URL).then(() => {
 });
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["https://registration-form-five-alpha.vercel.app"],
-    methods: ["GET", "POST"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use("/", userRouter);
 app.use(errorHandler);
 app.listen(PORT, () => {
