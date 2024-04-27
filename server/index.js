@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: ["https://registration-form-chi-eight.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST"],
     credentials: true,
   })
 );
