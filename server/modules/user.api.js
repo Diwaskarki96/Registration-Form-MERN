@@ -6,9 +6,9 @@ const {
 const userController = require("./user.controller");
 const jwt = require("jsonwebtoken");
 
-// router.get("/", (req, res) => {
-//   res.json({ msg: "Api is working" });
-// });
+router.get("/", (req, res) => {
+  res.json({ msg: "Api is working" });
+});
 
 router.post("/register", async (req, res, next) => {
   try {
