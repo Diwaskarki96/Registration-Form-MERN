@@ -1,5 +1,5 @@
 import axios from "axios";
 export const $axios = axios.create({
-  baseURL: "https://registration-form-api.onrender.com",
+  baseURL: "http://localhost:8888/",
   timeout: 5000,
 });

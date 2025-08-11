@@ -22,6 +22,10 @@ const Login = () => {
       return await $axios.post("/login", values);
     },
     onSuccess: (res) => {
+      console.log({res})
+            const accessToken = res?.data?.token;
+      localStorage.setItem("accessToken", accessToken);
+
       navigate("/home");
     },
     onError: (error) => {
@@ -41,7 +45,7 @@ const Login = () => {
     >
       {(formik) => {
         return (
-          <div>
+          <div style={{backgroundColor:"#fffdf7"}}>
             {error && (
               <Alert sx={{ marginBottom: "2rem" }} severity="error">
                 {error}
@@ -61,7 +65,7 @@ const Login = () => {
             >
               {isPending && <LinearProgress />}
 
-              <Typography variant="h3">Login</Typography>
+              <Typography variant="h3" color={"black"}>Login</Typography>
               <FormControl>
                 <TextField
                   label="Email"

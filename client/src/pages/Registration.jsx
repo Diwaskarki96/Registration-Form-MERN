@@ -45,7 +45,7 @@ const Registration = () => {
     >
       {(formik) => {
         return (
-          <div>
+          <div style={{backgroundColor: "#fffdf7" }}>
             {error && (
               <Alert sx={{ marginBottom: "2rem" }} severity="error">
                 {error}
@@ -63,7 +63,7 @@ const Registration = () => {
               }}
             >
               {isPending && <LinearProgress />}
-              <Typography variant="h3">Register</Typography>
+              <Typography variant="h3" color={"black"}>Register</Typography>
               <FormControl>
                 <TextField
                   label="First Name"
